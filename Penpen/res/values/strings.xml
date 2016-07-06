@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Penpen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!--主界面 -->
+    <string name="main_mine">我的</string>
+    <string name="main_message">消息</string>
+    <string name="main_circle">圈子</string>
+    <string name="main_discover">发现</string>
+    <string name="main_publish">发布</string>
+</resources>
