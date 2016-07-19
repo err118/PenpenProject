@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/tab_publish_tv_pop0"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
@@ -59,17 +53,18 @@
                 android:orientation="vertical" >
 
                 <ListView
-                    android:id="@+id/maintab_category_list"
+                    android:id="@+id/maintab_publish_category_list"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content" >
                 </ListView>
 
                 <TextView
+                    android:id="@+id/maintab_publish_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
