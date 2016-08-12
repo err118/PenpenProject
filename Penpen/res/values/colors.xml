@@ -1,0 +1,6 @@
+<resources>
+    <!--主页颜色 -->
+        <color name="maintab_blue">#239CF9</color>
+        <color name="maintab_grey">#828b96</color>
+        <!--  -->
+    </resources>

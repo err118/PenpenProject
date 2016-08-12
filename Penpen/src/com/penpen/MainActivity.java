@@ -24,12 +24,12 @@ public class MainActivity extends FragmentActivity {
 	// 定义布局
 	private LayoutInflater layoutInflater;
 	// 定义数组来存放Fragment界面
-	private Class fragmentArray[] = { FragmentMainTabPublish.class, FragmentMainTabDiscover.class,
-			FragmentMainTabMessage.class, FragmentMainTabMine.class};
+	private Class fragmentArray[] = { FragmentMainTabDiscover.class,
+			FragmentMainTabPublish.class, FragmentMainTabMessage.class, FragmentMainTabMine.class};
 	// 定义数组来存放按钮图片
 	private int mImageViewArray[] = { };
 	// Tab选项卡底部的文字
-	private String mTextviewArray[] = { "发布", "发现","消息", "我的"};
+	private String mTextviewArray[] = { "发现", "关注", "消息", "我的"};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

@@ -1,7 +1,13 @@
 package com.penpen;
 
-import com.penpen.discover.Fragment_Nearby;
+import java.lang.annotation.Annotation;
+import java.nio.channels.SelectableChannel;
+
+import com.lidroid.xutils.view.annotation.event.OnItemSelected;
+import com.penpen.discover.Fragment_Dis_Nearby;
+import com.penpen.discover.Fragment_Dis_Order;
 import com.penpen.viewUtils.indicator.Indicator;
+import com.penpen.viewUtils.indicator.Indicator.OnTransitionListener;
 import com.penpen.viewUtils.indicator.IndicatorViewPager;
 import com.penpen.viewUtils.indicator.IndicatorViewPager.IndicatorFragmentPagerAdapter;
 import com.penpen.viewUtils.indicator.slidebar.ColorBar;
@@ -13,9 +19,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class FragmentMainTabDiscover extends BaseFragment {
@@ -25,6 +33,11 @@ public class FragmentMainTabDiscover extends BaseFragment {
 	private LayoutInflater inflate;
 	private ViewPager viewPager;
 	private Indicator indicator;
+	private String textviewArray[] = { "订单", "人"};
+	private String btnArray[] = {"发布", "筛选"};
+	// 定义数组来存放Fragment界面
+	private Fragment fragmentArray[] = { new Fragment_Dis_Order(), new Fragment_Dis_Nearby()};
+	private Button btnSelect;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -40,19 +53,35 @@ public class FragmentMainTabDiscover extends BaseFragment {
 		return rootView;
 	}
 	private void init(){
+		btnSelect = (Button) rootView.findViewById(R.id.select);
+		btnSelect.setText(btnArray[0]);
 		viewPager = (ViewPager) rootView.findViewById(R.id.fragment_tabmain_viewPager);
 		indicator = (Indicator) rootView.findViewById(R.id.fragment_tabmain_indicator);
 		indicator.setScrollBar(new ColorBar(context, Color.RED, 5));
 		float unSelectSize = 16;
 		float selectSize = unSelectSize * 1.2f;
-
 		int selectColor = Color.BLUE;
 		int unSelectColor = Color.GRAY;
 		indicator.setOnTransitionListener(new OnTransitionTextListener().setColor(selectColor, unSelectColor).setSize(selectSize, unSelectSize));
-		viewPager.setOffscreenPageLimit(4);
+		viewPager.setOffscreenPageLimit(2);
 		indicatorViewPager = new IndicatorViewPager(indicator, viewPager);
 		inflate = LayoutInflater.from(getContext());
 		indicatorViewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
+		indicator.getPreSelectItem();
+		indicatorViewPager.setOnIndicatorPageChangeListener(new IndicatorViewPager.OnIndicatorPageChangeListener() {
+			
+			@Override
+			public void onIndicatorPageChange(int preItem, int currentItem) {
+				// TODO Auto-generated method stub
+				Log.e("   ", "-------->" + currentItem);
+				if(currentItem == 0){
+					btnSelect.setText(btnArray[currentItem]);
+				}
+				else if(currentItem == 1){
+					btnSelect.setText(btnArray[currentItem]);
+				}
+			}
+		});;
 	}
 	private class MyAdapter extends IndicatorFragmentPagerAdapter {
 
@@ -62,7 +91,7 @@ public class FragmentMainTabDiscover extends BaseFragment {
 
 		@Override
 		public int getCount() {
-			return 3;
+			return 2;
 		}
 
 		@Override
@@ -71,13 +100,13 @@ public class FragmentMainTabDiscover extends BaseFragment {
 				convertView = inflate.inflate(R.layout.tab_second_top, container, false);
 			}
 			TextView textView = (TextView) convertView;
-			textView.setText("Dis");
+			textView.setText(textviewArray[position]);
 			return convertView;
 		}
 
 		@Override
 		public Fragment getFragmentForPage(int position) {
-			Fragment_Nearby mainFragment = new Fragment_Nearby();
+			Fragment mainFragment = fragmentArray[position];
 //			Bundle bundle = new Bundle();
 //			bundle.putString(SecondLayerFragment.INTENT_STRING_TABNAME, tabName);
 //			bundle.putInt(SecondLayerFragment.INTENT_INT_POSITION, position);

@@ -8,6 +8,7 @@ import com.penpen.viewUtils.indicator.Indicator.OnTransitionListener;
 import android.content.Context;
 
 import android.content.res.Resources;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;

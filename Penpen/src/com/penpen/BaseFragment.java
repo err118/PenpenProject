@@ -33,8 +33,6 @@ public abstract class BaseFragment extends Fragment {
 		FragmentTransaction ft = getActivity().getSupportFragmentManager()
 				.beginTransaction();
 
-		// ft.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
-
 		ft.replace(R.id.content, newFragment, "content");
 
 		if (isBack) {
