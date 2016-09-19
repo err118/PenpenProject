@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -16,4 +16,22 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-</resources>
+    <style name="style_text_size_big">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="style_text_size_mid">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="style_text_size_min">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="style_line_grey">
+         <item name="android:layout_height">1dp</item>
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_marginLeft">10dp</item>
+         <item name="android:layout_marginRight">10dp</item>
+         <item name="android:background">@color/blue_light</item>
+        </style>
+    </resources>

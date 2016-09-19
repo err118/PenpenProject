@@ -1,6 +1,8 @@
 <resources>
-    <!--主页颜色 -->
         <color name="maintab_blue">#239CF9</color>
         <color name="maintab_grey">#828b96</color>
-        <!--  -->
+        <color name="blue_light">#0087EE</color>
+        <color name="grey_background">#F4F4F4</color>
+        <color name="black_text">#292929</color>
+        <color name="white">#FFFFFF</color>
     </resources>

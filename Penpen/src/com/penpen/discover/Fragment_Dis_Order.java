@@ -10,6 +10,7 @@ import com.lidroid.xutils.db.sqlite.FinderLazyLoader;
 import com.penpen.BaseFragment;
 import com.penpen.R;
 import com.penpen.utils.Const;
+import com.penpen.viewUtils.indicator.FixedIndicatorView;
 import com.penpen.viewUtils.listView.XListView;
 import com.penpen.viewUtils.listView.XListView.IXListViewListener;
 
@@ -25,6 +26,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Fragment_Dis_Order extends BaseFragment implements IXListViewListener {
@@ -73,6 +75,7 @@ public class Fragment_Dis_Order extends BaseFragment implements IXListViewListen
 				toOrderDetailActivity(position);
 			}
 		});
+		
 	}
 
 	// 跳转到订单详情页面
@@ -85,8 +88,8 @@ public class Fragment_Dis_Order extends BaseFragment implements IXListViewListen
 	private void geneDatas() {
 		for (int i = 0; i != 20; ++i) {
 			Map<String , Object> map = new HashMap<String, Object>();
-			map.put(Const.ORDER_SUM, "$" + (++start));
-			map.put(Const.ORDER_TITLE, "Android仿小米动态曲线");
+			map.put(Const.ORDER_SUM, "¥ " + (++start));
+			map.put(Const.ORDER_TITLE, "Android仿小米动态曲线图绘制");
 			map.put(Const.ORDER_TYPE, "线上");
 			items.add(map);
 		}
@@ -141,7 +144,7 @@ public class Fragment_Dis_Order extends BaseFragment implements IXListViewListen
 			try {
 				if (convertView == null) {
 					viewHolder = new ViewHolder();
-					convertView = LayoutInflater.from(context).inflate(R.layout.order_list_item, null);
+					convertView = LayoutInflater.from(context).inflate(R.layout.item_order_list, null);
 					viewHolder.sumTv = (TextView) convertView.findViewById(R.id.order_item_sum);
 					viewHolder.titleTv = (TextView) convertView.findViewById(R.id.order_item_title);
 					viewHolder.typeTv = (TextView) convertView.findViewById(R.id.order_item_type);

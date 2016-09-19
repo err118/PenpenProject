@@ -25,7 +25,7 @@ public class MainActivity extends FragmentActivity {
 	private LayoutInflater layoutInflater;
 	// 定义数组来存放Fragment界面
 	private Class fragmentArray[] = { FragmentMainTabDiscover.class,
-			FragmentMainTabPublish.class, FragmentMainTabMessage.class, FragmentMainTabMine.class};
+			FragmentMainTabCircle.class, FragmentMainTabMessage.class, FragmentMainTabMine.class};
 	// 定义数组来存放按钮图片
 	private int mImageViewArray[] = { };
 	// Tab选项卡底部的文字
