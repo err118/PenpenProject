@@ -24,7 +24,8 @@
         <TabWidget
             android:id="@android:id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="57dp"
+            android:layout_height="50dp"
+            android:background="@color/grey_maintab"
             android:layout_weight="0"
             android:orientation="horizontal"
             android:showDividers="none" />

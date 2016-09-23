@@ -18,10 +18,10 @@ public class OrderDetailActivity extends Activity {
 		initView();
 	}
 	private void getIntentData(){
-		orderId = getIntent().getStringExtra("id");
+//		orderId = getIntent().getStringExtra("id");
 	}
 	private void initView(){
-		idTv = (TextView) findViewById(R.id.orderDetailId);
-		idTv.setText(orderId);
+//		idTv = (TextView) findViewById(R.id.orderDetailId);
+//		idTv.setText(orderId);
 	}
 }

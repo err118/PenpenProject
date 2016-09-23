@@ -15,6 +15,7 @@ import com.penpen.viewUtils.listView.XListView;
 import com.penpen.viewUtils.listView.XListView.IXListViewListener;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
@@ -60,11 +61,19 @@ public class Fragment_Dis_People extends BaseFragment implements IXListViewListe
 	private void geneDatas() {
 		for (int i = 0; i != 20; ++i) {
 			Map<String , Object> map = new HashMap<String, Object>();
+			if(i % 3 == 0){
 			map.put(Const.PEO_IMAGEURL, "http://gbres.dfcfw.com/Files/picture/20160416/size500/843015D1E6D7E56712D5895EBB3CA146.jpg");
-			map.put(Const.PEO_NICKNAME, "哈哈");
+			}
+			else if(i % 3 == 1){
+				map.put(Const.PEO_IMAGEURL, "http://b.hiphotos.baidu.com/image/pic/item/9825bc315c6034a857770337ce134954082376ea.jpg");
+			}
+			else if(i % 3 == 2){
+				map.put(Const.PEO_IMAGEURL, "http://img4.imgtn.bdimg.com/it/u=4287955577,1378032429&fm=11&gp=0.jpg");
+			}
+			map.put(Const.PEO_NICKNAME, "阿尔萨斯");
 			map.put(Const.PEO_SEX, "女");
 			map.put(Const.PEO_RANGE, + (++start) + "km");
-			map.put(Const.PEO_UWRITE, "白日依山尽，黄河入海流");
+			map.put(Const.PEO_UWRITE, "For the Lich King !");
 			items.add(map);
 		}
 	}
@@ -85,9 +94,16 @@ public class Fragment_Dis_People extends BaseFragment implements IXListViewListe
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				// TODO Auto-generated method stub
 //				toOrderDetailActivity(position);
+				toPeopleUserinfoActivity(position - 1);
 			}
 		});
 		
+	}
+//	个人信息界面
+	private void toPeopleUserinfoActivity(int position){
+		Intent intent = new Intent(getActivity(), PeopleUserinfoActivity.class);
+		intent.putExtra(Const.PEO_IMAGEURL, items.get(position).get(Const.PEO_IMAGEURL).toString());
+		startActivity(intent);
 	}
 //	附近的人适配器
 	public final class ViewHolder {

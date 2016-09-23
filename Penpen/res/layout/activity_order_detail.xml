@@ -3,11 +3,137 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <TextView
-        android:id="@+id/orderDetailId"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:textColor="@color/maintab_grey"
-        />
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/orderDetailCommit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_rectangle_blue"
+            android:padding="10dp"
+            android:text="申请" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/orderDetailCommit" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/orderDetail_peo_avatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/defaultuser" />
+
+                    <TextView
+                        android:id="@+id/orderDetail_peo_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/orderDetail_peo_avatar"
+                        android:text="阿尔萨斯" />
+
+                    <TextView
+                        android:id="@+id/orderDetail_peo_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderDetail_peo_nickname"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/orderDetail_peo_avatar"
+                        android:text="男" />
+
+                    <TextView
+                        android:id="@+id/orderDetail_peo_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text="0.03km" />
+
+                    <TextView
+                        android:id="@+id/orderDetail_peo_underwrite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/orderDetail_peo_avatar"
+                        android:text="For the Lich King !" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/orderDetailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="程序开发" />
+
+                <TextView
+                    android:id="@+id/orderDetailContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="仿照小米app做一個曲线图能自动加载数据并可以左右滑动，效果类似于小米app,最好能在一周内完成" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="预计收入" />
+
+                    <TextView
+                        android:id="@+id/publish_task_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="999" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="性别要求" />
+
+                    <TextView
+                        android:id="@+id/orderDetail_sex_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rectangle_grey"
+                        android:padding="10dp"
+                        android:text="女" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

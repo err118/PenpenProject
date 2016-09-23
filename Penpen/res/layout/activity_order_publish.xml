@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="提问题" />
+                android:text="问题咨询" />
 
             <RadioButton
                 android:id="@+id/publish_type_task"
@@ -103,7 +103,7 @@
             android:id="@+id/publish_ask_commit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_round_rectangle"
+            android:background="@drawable/background_rectangle_blue"
             android:text="支付10元提问"
             android:textColor="@color/white" />
     </LinearLayout>
@@ -190,6 +190,7 @@
                 android:id="@+id/publish_sex_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_grey"
                 android:padding="10dp"
                 android:text="不限" />
 
@@ -197,6 +198,7 @@
                 android:id="@+id/publish_sex_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_grey"
                 android:padding="10dp"
                 android:text="女" />
 
@@ -204,8 +206,44 @@
                 android:id="@+id/publish_sex_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_grey"
                 android:padding="10dp"
                 android:text="男" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/publish_task_distance_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="距离" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/publish_task_distance_neatby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_grey"
+                android:padding="10dp"
+                android:text="附近的人和好友可见" />
+
+            <TextView
+                android:id="@+id/publish_task_distance_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_grey"
+                android:padding="10dp"
+                android:text="所有人可见" />
         </LinearLayout>
 
         <LinearLayout
@@ -222,10 +260,10 @@
                 android:id="@+id/publish_task_sum"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" 
+                android:layout_weight="1"
+                android:hint="如无人接单,金钱会在24小时内返回到原账户"
                 android:inputType="number"
-                android:textSize="10sp"
-                android:hint="如果无人接单,金钱会在24小时内返回到原账户"/>
+                android:textSize="10sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -234,9 +272,15 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/publish_task_invite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="*订单有效期默认为24小时，24小时后订单自动失效，若无人接单，需要重新发布"
+            android:text="邀请" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="*订单有效期默认显示为24小时，24小时后若无人接单，需要重新发布"
             android:padding="10dp" />
 
         <Button
@@ -244,8 +288,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/background_round_rectangle"
-            android:text="支付10元赏金并发布"
+            android:background="@drawable/background_rectangle_blue"
+            android:text="发布订单"
             android:textColor="@color/white" />
     </LinearLayout>
 
