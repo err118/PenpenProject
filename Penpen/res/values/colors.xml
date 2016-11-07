@@ -1,9 +1,13 @@
 <resources>
         <color name="blue_maintab">#12B7F5</color>
         <color name="grey_text">#888888</color>
-        <color name="grey_maintab">#FAFAFA</color>
+        <color name="grey_background">#FFFFFF</color>
+        <color name="grey_tab">#FAFAFA</color>
+        <color name="grey_line">#525353</color>
         <color name="blue_light">#0087EE</color>
-        <color name="grey_background">#EBEEEF</color>
         <color name="black_text">#1E1E1E</color>
         <color name="white">#FFFFFF</color>
+        <color name="grey_line_color">#525353</color>
+        <!-- 公用颜色 -->
+        <color name="color_title">#12B7F5</color>
     </resources>

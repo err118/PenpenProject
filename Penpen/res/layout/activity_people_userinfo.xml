@@ -2,7 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_background"
     android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_title" >
+
+        <ImageView
+            android:id="@+id/peoInfo_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_toRightOf="@id/peoInfo_back"
+            android:text="阿尔萨斯"
+            android:textSize="@dimen/text_size_big" />
+
+        <ImageView
+            android:id="@+id/peoInfo_operation"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,8 +55,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/background_rectangle_blue"
-                android:text="聊天" />
+                android:text="咨询"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/peopleUserinfo_follow"
@@ -36,8 +67,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/background_rectangle_blue"
-                android:text="关注" />
+                android:text="关注"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/peopleUserinfo_invite"
@@ -48,8 +79,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/background_rectangle_blue"
-                android:text="邀请她" />
+                android:text="邀请"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <ScrollView
@@ -92,13 +123,19 @@
                         android:text="男" />
 
                     <TextView
-                        android:id="@+id/peopleUserinfo_range"
+                        android:id="@+id/peopleUserinfo_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
+                        android:text="2分钟前" />
+                    <TextView
+                        android:id="@+id/peopleUserinfo_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/peopleUserinfo_time"
+                        android:layout_alignParentTop="true"
                         android:text="0.03km" />
-
                     <TextView
                         android:id="@+id/peopleUserinfo_underwrite"
                         android:layout_width="wrap_content"
@@ -123,10 +160,15 @@
                         android:text="联系方式" />
 
                     <TextView
-                        android:id="@+id/peopleUserinfo_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="110" />
+                        android:paddingRight="10dp"
+                        android:src="@drawable/forward" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -184,7 +226,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
-                        android:text="2010.5 - 2014.8" />
+                        android:text="2010级" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -230,24 +272,21 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="服务标签" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="评论" />
+                        android:paddingLeft="10dp"
+                        android:text="代上课  取快递   代考试 代写作业 代购  玩游戏 看电影 旅游"
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -259,6 +298,28 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="他参与的" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="评论" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="扮得**" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="声甜 人美 活儿好 值得推荐" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

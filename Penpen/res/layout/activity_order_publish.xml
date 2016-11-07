@@ -20,277 +20,289 @@
             android:src="@drawable/back" />
 
         <TextView
-            style="@style/style_text_size_big"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:padding="14dp" />
+            android:padding="14dp"
+            android:textSize="@dimen/text_size_mid" />
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="类型" />
-
-        <RadioGroup
-            android:id="@+id/publish_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal" >
-
-            <RadioButton
-                android:id="@+id/publish_type_ask"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="问题咨询" />
-
-            <RadioButton
-                android:id="@+id/publish_type_task"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="发任务" />
-        </RadioGroup>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/publish_ask_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        android:visibility="gone" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="问题标题" />
-
-        <EditText
-            android:id="@+id/publish_ask_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:hint="你的问题（5到15个字以内）"
-            android:padding="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="问题补充（选填）" />
-
-        <EditText
-            android:id="@+id/publish_ask_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:minHeight="30dp"
-            android:padding="10dp" />
-
-        <Button
-            android:id="@+id/publish_ask_commit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_rectangle_blue"
-            android:text="支付10元提问"
-            android:textColor="@color/white" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/publish_task_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="visible" >
-
-        <EditText
-            android:id="@+id/publish_task_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="主题"
-            android:maxLines="1"
-            android:padding="10dp" />
-
-        <View style="@style/style_line_grey" />
-
-        <EditText
-            android:id="@+id/publish_task_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="描述"
-            android:minLines="5"
-            android:padding="10dp" />
-
-        <LinearLayout
-            android:id="@+id/publish_task_style_choose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="完成方式" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/publish_task_online"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="线上" />
-
-            <TextView
-                android:id="@+id/publish_task_offline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="线下" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/publish_task_sex_choose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="性别" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/publish_sex_all"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_rectangle_grey"
-                android:padding="10dp"
-                android:text="不限" />
-
-            <TextView
-                android:id="@+id/publish_sex_female"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_rectangle_grey"
-                android:padding="10dp"
-                android:text="女" />
-
-            <TextView
-                android:id="@+id/publish_sex_male"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_rectangle_grey"
-                android:padding="10dp"
-                android:text="男" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/publish_task_distance_choose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="距离" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/publish_task_distance_neatby"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_rectangle_grey"
-                android:padding="10dp"
-                android:text="附近的人和好友可见" />
-
-            <TextView
-                android:id="@+id/publish_task_distance_all"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_rectangle_grey"
-                android:padding="10dp"
-                android:text="所有人可见" />
-        </LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="赏金" />
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-            <EditText
-                android:id="@+id/publish_task_sum"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="如无人接单,金钱会在24小时内返回到原账户"
-                android:inputType="number"
-                android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类型" />
 
-            <TextView
-                android:layout_width="wrap_content"
+                <RadioGroup
+                    android:id="@+id/publish_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/publish_type_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="问题咨询" />
+
+                    <RadioButton
+                        android:id="@+id/publish_type_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发任务" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/publish_ask_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="元" />
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="问题标题" />
+
+                <EditText
+                    android:id="@+id/publish_ask_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:hint="你的问题（5到15个字以内）"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="问题补充（选填）" />
+
+                <EditText
+                    android:id="@+id/publish_ask_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:minHeight="30dp"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/publish_ask_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_rectangle_blue"
+                    android:text="支付10元提问"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/publish_task_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <EditText
+                    android:id="@+id/publish_task_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="主题"
+                    android:maxLines="1"
+                    android:padding="10dp" />
+
+                <View style="@style/style_line_grey_horizontal" />
+
+                <EditText
+                    android:id="@+id/publish_task_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="描述"
+                    android:minLines="5"
+                    android:padding="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/publish_task_style_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="完成方式" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/publish_task_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="线上" />
+
+                    <TextView
+                        android:id="@+id/publish_task_offline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="线下" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/publish_task_sex_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="性别" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/publish_sex_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rectangle_grey"
+                        android:padding="10dp"
+                        android:text="不限" />
+
+                    <TextView
+                        android:id="@+id/publish_sex_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rectangle_grey"
+                        android:padding="10dp"
+                        android:text="女" />
+
+                    <TextView
+                        android:id="@+id/publish_sex_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rectangle_grey"
+                        android:padding="10dp"
+                        android:text="男" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/publish_task_distance_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="距离" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/publish_task_distance_neatby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rectangle_grey"
+                        android:padding="10dp"
+                        android:text="附近的人和好友可见" />
+
+                    <TextView
+                        android:id="@+id/publish_task_distance_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rectangle_grey"
+                        android:padding="10dp"
+                        android:text="所有人可见" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="赏金" />
+
+                    <EditText
+                        android:id="@+id/publish_task_sum"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="如无人接单,金钱会在24小时内返回到原账户"
+                        android:inputType="number"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/publish_task_invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="邀请" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="*订单有效期默认显示为24小时，24小时后若无人接单，需要重新发布"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/publish_task_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_rectangle_blue"
+                    android:text="发布订单"
+                    android:textColor="@color/white" />
+            </LinearLayout>
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/publish_task_invite"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="邀请" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="*订单有效期默认显示为24小时，24小时后若无人接单，需要重新发布"
-            android:padding="10dp" />
-
-        <Button
-            android:id="@+id/publish_task_commit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/background_rectangle_blue"
-            android:text="发布订单"
-            android:textColor="@color/white" />
-    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

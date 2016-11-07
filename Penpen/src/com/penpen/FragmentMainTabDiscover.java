@@ -5,6 +5,7 @@ import java.lang.annotation.Annotation;
 import java.nio.channels.SelectableChannel;
 
 import com.lidroid.xutils.view.annotation.event.OnItemSelected;
+import com.penpen.R.string;
 import com.penpen.discover.Fragment_Dis_Order;
 import com.penpen.discover.Fragment_Dis_People;
 import com.penpen.discover.OrderPublishActivity;
@@ -37,8 +38,8 @@ public class FragmentMainTabDiscover extends BaseFragment {
 	private LayoutInflater inflate;
 	private ViewPager viewPager;
 	private Indicator indicator;
-	private String textviewArray[] = { "订单", "人" };
-	private String btnArray[] = { "发布", "筛选" };
+	private int textviewArray[] = { R.string.tab_order, R.string.tab_people };
+	private int btnArray[] = { R.string.order_publish, R.string.people_filter };
 	// 定义数组来存放Fragment界面
 	private Fragment fragmentArray[] = { new Fragment_Dis_Order(), new Fragment_Dis_People() };
 	private Button btnSelect;
@@ -63,10 +64,10 @@ public class FragmentMainTabDiscover extends BaseFragment {
 		btnSelect.setText(btnArray[0]);
 		viewPager = (ViewPager) rootView.findViewById(R.id.fragment_tabmain_viewPager);
 		indicator = (Indicator) rootView.findViewById(R.id.fragment_tabmain_indicator);
-		indicator.setScrollBar(new ColorBar(context, Color.RED, 5));
+		indicator.setScrollBar(new ColorBar(context, 0xFF3462FF, 5));
 		float unSelectSize = 16;
 		float selectSize = unSelectSize * 1.2f;
-		int selectColor = Color.BLUE;
+		int selectColor = 0xFF1E1E1E;
 		int unSelectColor = Color.GRAY;
 		indicator.setOnTransitionListener(
 				new OnTransitionTextListener().setColor(selectColor, unSelectColor).setSize(selectSize, unSelectSize));
@@ -82,9 +83,9 @@ public class FragmentMainTabDiscover extends BaseFragment {
 				// TODO Auto-generated method stub
 				Log.e("   ", "-------->" + currentItem);
 				if (currentItem == 0) {
-					btnSelect.setText(btnArray[currentItem]);
+					btnSelect.setText(getString(btnArray[currentItem]));
 				} else if (currentItem == 1) {
-					btnSelect.setText(btnArray[currentItem]);
+					btnSelect.setText(getString(btnArray[currentItem]));
 				}
 			}
 		});

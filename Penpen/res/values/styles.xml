@@ -15,19 +15,7 @@
     <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-
-    <style name="style_text_size_big">
-        <item name="android:textSize">17sp</item>
-    </style>
-
-    <style name="style_text_size_mid">
-        <item name="android:textSize">13sp</item>
-    </style>
-
-    <style name="style_text_size_min">
-        <item name="android:textSize">12sp</item>
-    </style>
-    <style name="style_line_grey">
+    <style name="style_line_grey_horizontal">
          <item name="android:layout_height">1dp</item>
          <item name="android:layout_width">match_parent</item>
          <item name="android:layout_marginLeft">10dp</item>

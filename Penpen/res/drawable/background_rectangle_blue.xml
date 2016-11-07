@@ -3,7 +3,7 @@
     android:shape="rectangle" >
 
     <!-- 填充的颜色 -->
-    <solid android:color="#0087EE" />
+    <solid android:color="@color/blue_maintab" />
 
     <!-- 设置按钮的四个角为弧形 -->
     <corners android:radius="25dp" />

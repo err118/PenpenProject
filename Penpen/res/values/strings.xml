@@ -5,17 +5,25 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <!-- 主界面 -->
-    <string name="main_mine">我的</string>
-    <string name="main_message">消息</string>
+    <string name="tab_discover">发现</string>
+    <string name="tab_follow">关注</string>
+    <string name="tab_mine">我的</string>
+    <string name="tab_msg">消息</string>
     <string name="main_circle">圈子</string>
-    <string name="main_discover">发现</string>
-    <string name="main_publish">发布</string>
     <!-- 发现-订单 -->
     <string name="hello">Hello World, XListViewActivity!</string>
+    <string name="tab_order">订单</string>
+    <string name="order_detail_title">订单详情</string>
+    <string name="order_detail_apply">申请</string>
+    <!-- 发现 人 -->
+    <string name="tab_people">人</string>
+    <string name="people_userinfo_title"></string>
+    <string name="order_publish">发布</string>
+    <string name="people_filter">筛选</string>
     <string name="xlistview_header_hint_normal">下拉刷新</string>
     <string name="xlistview_header_hint_ready">松开刷新数据</string>
     <string name="xlistview_header_hint_loading">正在加载...</string>
-    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_header_last_time"></string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
 

@@ -2,7 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_background"
     android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_title" >
+
+        <ImageView
+            android:id="@+id/orderDetail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:text="@string/order_detail_title"
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/white" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +43,8 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/background_rectangle_blue"
             android:padding="10dp"
-            android:text="申请" />
+            android:text="@string/order_detail_apply"
+            android:textColor="@color/white" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -32,14 +58,14 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="10dp" >
 
                     <ImageView
                         android:id="@+id/orderDetail_peo_avatar"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:src="@drawable/defaultuser" />
 
                     <TextView
@@ -136,4 +162,5 @@
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>
-</LinearLayout>
+
+</LinearLayout>
